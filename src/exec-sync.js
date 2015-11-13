@@ -1,4 +1,12 @@
 /**
+ * Copyright (c) 2015 Kerem Güneş
+ *    <http://qeremy.com>
+ *
+ * The MIT License
+ *    <http://opensource.org/licenses/MIT>
+ */
+
+/**
  * Module objects.
  * @private
  */
