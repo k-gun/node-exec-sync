@@ -10,6 +10,8 @@ $~ npm install qeremy-exec-sync
 
 ##Usage
 ```js
+var execSync = require("qeremy-exec-sync");
+
 // direct
 var output = execSync("ls -la");
 console.log(output);
