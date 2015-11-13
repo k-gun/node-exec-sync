@@ -5,13 +5,21 @@
   "license": "MIT",
   "author": "Kerem Güneş <qeremy@gmail.com>",
   "homepage": "http://qeremy.com",
-  "repository": "git@github.com:qeremy/exec-sync.git",
-  "keywords": ["execSync"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/qeremy/exec-sync-js.git"
+  },
+  "keywords": [
+    "execSync"
+  ],
   "engines": {
     "node": ">= 0.10.25"
   },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/qeremy/exec-sync/issues"
   }
 }
