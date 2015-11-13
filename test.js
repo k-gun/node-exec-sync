@@ -1,7 +1,8 @@
 var execSync = require("./index.js");
 
-// var r = execSync("ls -la");
-// console.log(r)
+// direct
+// var output = execSync("ls -la");
+// console.log(output)
 
 // with callback
 // execSync("ls -la", {}, console.log)
