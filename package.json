@@ -1,0 +1,17 @@
+{
+  "name": "qeremy-exec-sync",
+  "version": "1.0.0",
+  "description": "Sync'ed shell command for Node.js.",
+  "license": "MIT",
+  "author": "Kerem Güneş <qeremy@gmail.com>",
+  "homepage": "http://qeremy.com",
+  "repository": "git@github.com:qeremy/exec-sync.git",
+  "keywords": ["execSync"],
+  "engines": {
+    "node": ">= 0.10.25"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
