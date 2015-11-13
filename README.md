@@ -1,15 +1,14 @@
-##execSync##
-
+## execSync
 Execute sync'ed shell commands in Node.js modules if not using Node.js >= 0.12 or IO.js >= 1.10 (like me).
 
 Warning: Be sure what you do while using it!
 
-##Install##
+##Install
 ```sh
 $~ npm install qeremy-exec-sync
 ```
 
-##Usage##
+##Usage
 ```js
 // direct
 var output = execSync("ls -la");
@@ -23,5 +22,5 @@ execSync("ls -la", {}, function(output){
 });
 ```
 
-##License##
+##License
 The MIT License
