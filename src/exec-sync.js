@@ -5,7 +5,17 @@
 var fs = require("fs");
 var cp = require("child_process");
 
-module.exports = function(cmd, options, callback) {
+/**
+ * Sync'ed exec.
+ * @public
+ *
+ * @link   http://uri.li/yKHV Original source.
+ * @param  {String}   cmd
+ * @param  {Object}   options Used only if built-in execSync() exists.
+ * @param  {Function} callback
+ * @return {String}
+ */
+function execSync(cmd, options, callback) {
     // check built-in execSync()
     if (cp.execSync) {
         return cp.execSync(cmd, options || {});
@@ -45,3 +55,8 @@ module.exports = function(cmd, options, callback) {
 
     return output;
 };
+
+/**
+ * Expose module.
+ */
+module.exports = execSync;
