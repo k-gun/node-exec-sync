@@ -1,7 +1,7 @@
 {
   "name": "qeremy-exec-sync",
   "version": "1.0.1",
-  "description": "Sync'ed shell command for Node.js.",
+  "description": "Sync'ed shell commands for Node.js.",
   "license": "MIT",
   "author": "Kerem Güneş <qeremy@gmail.com>",
   "homepage": "http://qeremy.com",
