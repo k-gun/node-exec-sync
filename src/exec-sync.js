@@ -29,9 +29,17 @@ function execSync(cmd, options, callback) {
         return cp.execSync(cmd, options || {});
     }
 
+    // tmp directory
+    var tmpDir = __dirname +"/../tmp";
+
+    // create tmp directory
+    try {
+        fs.mkdirSync(tmpDir);
+    } catch (e) {}
+
     // process files
-    var outFile = __dirname +"/../tmp/out",
-        doneFile = __dirname +"/../tmp/done";
+    var outFile = tmpDir +"/out",
+        doneFile = tmpDir +"/done";
 
     // remove if these files exists
     try {
