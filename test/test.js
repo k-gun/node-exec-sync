@@ -1,4 +1,4 @@
-var execSync = require("./index.js");
+var execSync = require("../index.js");
 
 // direct
 var output = execSync("ls -la");
