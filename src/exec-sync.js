@@ -64,7 +64,7 @@ function execSync(cmd, options, callback) {
     fs.unlinkSync(outFile);
     fs.unlinkSync(doneFile);
 
-    // sync but as s shortcut
+    // sync'ed but care of hipsters..
     if (callback) {
         return callback(output);
     }
