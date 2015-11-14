@@ -17,6 +17,9 @@ var cp = require("child_process");
  * Sync'ed exec.
  * @public
  *
+ * It always returns string, so check the resuls just
+ * doing if (out == "") { err! } for you control flow.
+ *
  * @link   http://uri.li/yKHV Original source.
  * @param  {String}   cmd
  * @param  {Object}   options Used only if built-in execSync() exists.
@@ -41,7 +44,7 @@ function execSync(cmd, options, callback) {
     var outFile = tmpDir +"/out",
         doneFile = tmpDir +"/done";
 
-    // remove if these files exists
+    // remove tmp files if exist
     try {
         fs.unlinkSync(outFile);
         fs.unlinkSync(doneFile);
@@ -50,14 +53,13 @@ function execSync(cmd, options, callback) {
     // run the command in a subshell
     cp.exec(cmd +" 2>&1 1> '"+ outFile +"' && echo 'done!' > '"+ doneFile +"'");
 
-    // deprecated
-    // https://nodejs.org/api/fs.html#fs_fs_existssync_path
+    // deprecated? https://nodejs.org/api/fs.html#fs_fs_existssync_path
     var fn = (fs.accessSync && "accessSync") || "existsSync";
 
     // just block the event loop while command'ing
     while (!fs[fn](doneFile)) {}
 
-    // add utf-8
+    // get output using utf-8
     var output = fs.readFileSync(""+ outFile +"", "utf-8");
 
     // remove tmp files
