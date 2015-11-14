@@ -17,7 +17,7 @@ var cp = require("child_process");
  * Sync'ed exec.
  * @public
  *
- * It always returns string, so check the resuls just
+ * It always returns string, so check the result just
  * doing if (out == "") { err! } for you control flow.
  *
  * @link   http://uri.li/yKHV Original source.
