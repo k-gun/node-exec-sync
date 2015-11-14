@@ -27,7 +27,7 @@ var cp = require("child_process");
  * @return {String}
  */
 function execSync(cmd, options, callback) {
-    // check built-in execSync()
+    // use built-in execSync() if exists
     if (cp.execSync) {
         return cp.execSync(cmd, options || {});
     }
