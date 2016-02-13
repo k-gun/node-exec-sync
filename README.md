@@ -7,13 +7,13 @@ Warning: Be sure what you do while using it!
 ## Install
 
 ```sh
-$~ npm install k-gun-execSync
+$~ npm install k-gun-execsync
 ```
 
 ## Usage
 
 ```js
-var execSync = require("k-gun-execSync");
+var execSync = require("k-gun-execsync");
 
 // direct
 var output = execSync("ls -la");

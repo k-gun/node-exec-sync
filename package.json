@@ -1,5 +1,5 @@
 {
-  "name": "k-gun-execSync",
+  "name": "k-gun-execsync",
   "version": "1.0.4",
   "description": "Sync'd shell commands for Node.js.",
   "author": "Kerem Güneş <k-gun@mail.com>",
