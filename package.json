@@ -1,28 +1,7 @@
 {
-  "name": "qeremy-exec-sync",
-  "version": "1.0.3",
-  "description": "Sync'ed shell commands for Node.js.",
-  "license": "MIT",
-  "author": "Kerem Güneş <qeremy@gmail.com>",
-  "homepage": "http://qeremy.com",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/qeremy/node-exec-sync.git"
-  },
-  "keywords": [
-    "execSync"
-  ],
-  "engines": {
-    "node": ">= 0.10.25"
-  },
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "bugs": {
-    "url": "https://github.com/qeremy/node-exec-sync/issues"
-  },
-  "directories": {
-    "test": "test"
-  }
+  "name": "k-gun-execSync",
+  "version": "1.0.4",
+  "description": "Sync'd shell commands for Node.js.",
+  "author": "Kerem Güneş <k-gun@mail.com>",
+  "license": "MIT"
 }

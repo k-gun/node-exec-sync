@@ -7,13 +7,13 @@ Warning: Be sure what you do while using it!
 ## Install
 
 ```sh
-$~ npm install qeremy-exec-sync
+$~ npm install k-gun-execSync
 ```
 
 ## Usage
 
 ```js
-var execSync = require("qeremy-exec-sync");
+var execSync = require("k-gun-execSync");
 
 // direct
 var output = execSync("ls -la");
@@ -23,7 +23,7 @@ console.log(output);
 execSync("ls -la", {}, console.log);
 // or
 execSync("ls -la", {}, function(output){
-    console.log(output);
+   console.log(output);
 });
 ```
 

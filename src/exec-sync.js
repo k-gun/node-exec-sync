@@ -1,9 +1,9 @@
 /**
  * Copyright (c) 2015 Kerem Güneş
- *    <http://qeremy.com>
+ *   <k-gun@mail.com>
  *
  * The MIT License
- *    <http://opensource.org/licenses/MIT>
+ *   <http://opensource.org/licenses/MIT>
  */
 
 /**
@@ -27,51 +27,51 @@ var cp = require("child_process");
  * @return {String}
  */
 function execSync(cmd, options, callback) {
-    // use built-in execSync() if exists
-    if (cp.execSync) {
-        return cp.execSync(cmd, options || {});
-    }
+   // use built-in execSync() if exists
+   if (cp.execSync) {
+      return cp.execSync(cmd, options || {});
+   }
 
-    // tmp directory
-    var tmpDir = __dirname +"/../tmp";
+   // tmp directory
+   var tmpDir = __dirname +"/../tmp";
 
-    // create tmp directory
-    try {
-        fs.mkdirSync(tmpDir);
-    } catch (e) {}
+   // create tmp directory
+   try {
+      fs.mkdirSync(tmpDir);
+   } catch (e) {}
 
-    // process files
-    var outFile = tmpDir +"/out",
-        doneFile = tmpDir +"/done";
+   // process files
+   var outFile = tmpDir +"/out",
+       doneFile = tmpDir +"/done";
 
-    // remove tmp files if exist
-    try {
-        fs.unlinkSync(outFile);
-        fs.unlinkSync(doneFile);
-    } catch (e) {}
+   // remove tmp files if exist
+   try {
+      fs.unlinkSync(outFile);
+      fs.unlinkSync(doneFile);
+   } catch (e) {}
 
-    // run the command in a subshell
-    cp.exec(cmd +" 2>&1 1> '"+ outFile +"' && echo 'done!' > '"+ doneFile +"'");
+   // run the command in a subshell
+   cp.exec(cmd +" 2>&1 1> '"+ outFile +"' && echo 'done!' > '"+ doneFile +"'");
 
-    // deprecated? https://nodejs.org/api/fs.html#fs_fs_existssync_path
-    var fn = (fs.accessSync && "accessSync") || "existsSync";
+   // deprecated? https://nodejs.org/api/fs.html#fs_fs_existssync_path
+   var fn = (fs.accessSync && "accessSync") || "existsSync";
 
-    // just block the event loop while command'ing
-    while (!fs[fn](doneFile)) {}
+   // just block the event loop while command'ing
+   while (!fs[fn](doneFile)) {}
 
-    // get output using utf-8
-    var output = fs.readFileSync(""+ outFile +"", "utf-8");
+   // get output using utf-8
+   var output = fs.readFileSync(""+ outFile +"", "utf-8");
 
-    // remove tmp files
-    fs.unlinkSync(outFile);
-    fs.unlinkSync(doneFile);
+   // remove tmp files
+   fs.unlinkSync(outFile);
+   fs.unlinkSync(doneFile);
 
-    // sync'ed but care of hipsters..
-    if (callback) {
-        return callback(output);
-    }
+   // sync'ed but care of hipsters..
+   if (callback) {
+      return callback(output);
+   }
 
-    return output;
+   return output;
 };
 
 /**
