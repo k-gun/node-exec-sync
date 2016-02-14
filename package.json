@@ -1,7 +1,16 @@
 {
-  "name": "k-gun-execsync",
-  "version": "1.0.4",
-  "description": "Sync'd shell commands for Node.js.",
-  "author": "Kerem Güneş <k-gun@mail.com>",
-  "license": "MIT"
+   "name": "k-gun-execsync",
+   "version": "1.0.5",
+   "description": "Sync'd shell commands for Node.js.",
+   "homepage": "http://github.com/k-gun/node-exec-sync",
+   "license": "MIT",
+   "authors": [{
+      "name": "Kerem Güneş",
+      "email": "k-gun@mail.com"
+   }],
+   "repository": {
+      "type": "git",
+      "url": "git://github.com/k-gun/node-exec-sync.git"
+   },
+   "keywords": ["exec", "exec sync"]
 }
