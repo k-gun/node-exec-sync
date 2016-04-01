@@ -19,9 +19,8 @@ var execSync = require("k-gun-execsync");
 var output = execSync("ls -la");
 console.log(output);
 
-// with callback
+// with callback (not async)
 execSync("ls -la", {}, console.log);
-// or
 execSync("ls -la", {}, function(output){
    console.log(output);
 });
